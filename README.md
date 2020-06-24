@@ -54,6 +54,8 @@ Once your binder instance of JupyterLab has started follow the steps below to le
     jupyter labextension install .
     ```
 
+1. Once the build finishes refresh your browser so JuyterLab can catch the rebuilt files. Now create a new Notebook from the Launcher and you'll see your button in the toolbar, try clicking it.
+
 ## Resources
 
 * JupyterLab typscript extension cookiecutter repo: https://github.com/jupyterlab/extension-cookiecutter-ts
