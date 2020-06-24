@@ -29,7 +29,7 @@ export class ButtonExtension implements DocumentRegistry.IWidgetExtension<Notebo
     });
 
     // Add the toolbar button to the notebook toolbar
-    panel.toolbar.insertItem(99, 'mybutton', mybutton);
+    panel.toolbar.insertItem(10, 'mybutton', mybutton);
 
     // The ToolbarButton class implements `IDisposable`, so the
     // button *is* the extension for the purposes of this method.
