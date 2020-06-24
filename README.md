@@ -12,41 +12,41 @@ Once your binder instance of JupyterLab has started follow the steps below to le
     cookiecutter https://github.com/jupyterlab/extension-cookiecutter-ts
     ```
 
-2. Fill out the prompts (for our walkthrough the values do not matter) and then open the newly created directory in the file browser on the left. (Note: you may need to click the refresh icon for the new directory to display)
+    Fill out the prompts (for our walkthrough the values do not matter) and then open the newly created directory in the file browser on the left. (Note: you may need to click the refresh icon for the new directory to display)
 
-3. In our newly created extension directory we will want to make some simple code changes. By default the new extension will only make a log to the browser console and we want it to do a little more than that.
+1. In our newly created extension directory we will want to make some simple code changes. By default the new extension will only make a log to the browser console and we want it to do a little more than that.
 
     1. Edit `package.json` (to edit rather than view json files, right click the file and select Open With > Editor) then add the following to `dependencies` section:
 
-    ```
-    "@jupyterlab/apputils": "^2.0.0",
-    "@jupyterlab/docregistry": "^2.0.0",
-    "@jupyterlab/notebook": "^2.0.0",
-    "@lumino/disposable":  "^1.3.5"
-    ```
+        ```
+        "@jupyterlab/apputils": "^2.0.0",
+        "@jupyterlab/docregistry": "^2.0.0",
+        "@jupyterlab/notebook": "^2.0.0",
+        "@lumino/disposable":  "^1.3.5"
+        ```
 
-    You will need these for the imports in your `.ts` files.
+        You will need these for the imports in your `.ts` files.
 
-    2. Edit `src/index.ts` and add the following import:
+    1. Edit `src/index.ts` and add the following import:
 
-    ```
-    import {ButtonExtension} from "./button";
-    ```
+        ```
+        import {ButtonExtension} from "./button";
+        ```
 
-    then add the following to the `activate` function:
+        then add the following to the `activate` function:
 
-    ```
-    let buttonExtension = new ButtonExtension();
-    app.docRegistry.addWidgetExtension('Notebook', buttonExtension);
-    ```
+        ```
+        let buttonExtension = new ButtonExtension();
+        app.docRegistry.addWidgetExtension('Notebook', buttonExtension);
+        ```
 
-    This will import and create a example button extension, then add it to the registry so it will be available when editing notebooks.
+        This will import and create a example button extension, then add it to the registry so it will be available when editing notebooks.
 
-    3. Copy the `button.ts` file provided with this demo into the `src` directory. The file is located in the examples directory at the root of the file browser. To copy a file just right click on it and select Copy. To paste either right click the target directory, or if in the directory any whitespace in the filebrowser, and select Paste.
+    1. Copy the `button.ts` file provided with this demo into the `src` directory. The file is located in the examples directory at the root of the file browser. To copy a file just right click on it and select Copy. To paste either right click the target directory, or if in the directory any whitespace in the filebrowser, and select Paste.
 
-    Feel free to read through `button.ts`, each line of code has a short comment explaining it's purpose.
+        Feel free to read through `button.ts`, each line of code has a short comment explaining it's purpose.
 
-4. Now we want to build our new extension. In the Terminal `cd` to your extension directory then run the following to build and install your extension. The install steps are detailed further in the README for your extension.
+1. Now we want to build our new extension. In the Terminal `cd` to your extension directory then run the following to build and install your extension. The install steps are detailed further in the README for your extension.
 
     ```
     jlpm
@@ -56,5 +56,5 @@ Once your binder instance of JupyterLab has started follow the steps below to le
 
 ## Resources
 
-* JupyterLab Typscript extension cookiecutter repo: https://github.com/jupyterlab/extension-cookiecutter-ts
+* JupyterLab typscript extension cookiecutter repo: https://github.com/jupyterlab/extension-cookiecutter-ts
 * Video presentation of this demo from PyData Austin 2019: https://youtu.be/PT9UIvLWUI0
