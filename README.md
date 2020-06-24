@@ -1,37 +1,51 @@
-# SciPy 2020 Poster
+# Customizing JupyterLab using extensions - SciPy 2020 Poster
 
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajbozarth/SciPy2020/master?urlpath=lab)
 
-## Creating a extension
+## Creating a lab extension
 
-1. Open a console in lab and run: `cookiecutter https://github.com/jupyterlab/extension-cookiecutter-ts`
+Once your binder instance of JupyterLab has started follow the steps below to learn how you can create and install a lab extension all from with JupyterLab
 
-2. Fill out the prompts and then in the lab file browser open the new dir
+1. From the launcher tab open a Terminal and run the following command to create a lab extension from a cookiecutter.
 
-3. Edit `package.json` adding the following `dependencies`:
+    `cookiecutter https://github.com/jupyterlab/extension-cookiecutter-ts`
 
-   ```
-   "@jupyterlab/apputils": "^2.0.0",
-   "@jupyterlab/docregistry": "^2.0.0",
-   "@jupyterlab/notebook": "^2.0.0",
-   "@lumino/disposable":  "^1.3.5"
-   ```
+2. Fill out the prompts (for our walkthrough the values do not matter) and then open the newly created directory in the file browser on the left. (Note: you may need to click the refresh icon for the new directory to display)
 
-3. Edit `src/index.ts` and add the following import: `import {ButtonExtension} from "./button";`
-and add the follwoing to the activate function:
+3. In our newly created extension directory we will want to make some simple code changes. By default the new extension will only make a log to the browser console and we want it to do a little more than that.
+    
+    1. Edit `package.json` (to edit rather than view json files, right click the file and select Open With > Editor) then add the following to `dependencies` section:
+    
+    `
+    "@jupyterlab/apputils": "^2.0.0",
+    "@jupyterlab/docregistry": "^2.0.0",
+    "@jupyterlab/notebook": "^2.0.0",
+    "@lumino/disposable":  "^1.3.5"
+    `
+    
+    You will need these for the imports in your `.ts` files.
+    
+    2. Edit `src/index.ts` and add the following import:
+    
+    `import {ButtonExtension} from "./button";`
+    
+    then add the following to the `activate` function:
 
-   ```
-   let buttonExtension = new ButtonExtension();
-   app.docRegistry.addWidgetExtension('Notebook', buttonExtension);
-   ```
+    `
+    let buttonExtension = new ButtonExtension();
+     app.docRegistry.addWidgetExtension('Notebook', buttonExtension);
+    `
+    
+    This will import and create a example button extension, then add it to the registry so it will be available when editing notebooks.
 
-4. Move the `button.ts` file into the `src` dir
+    3. Copy the `button.ts` file provided with this demo into the `src` directory. The file is located in the examples directory at the root of the file browser. To copy a file just right click on it and select Copy. To paste either right click the target directory, or if in the directory any whitespace in the filebrowser, and select Paste.
+    
+    Feel free to read through `button.ts`, each line of code has a short comment explaining it's purpose.
 
-5. In the console from step 1 run:
+4. Now we want to build our new extension. In the Terminal `cd` to your extension directory then run the following to build and install your extension. The install steps are detailed further in the README for your extension.
 
-   ```
-   jlpm
-   jlpm build
-   jupyter labextension install .
-   ```
-
+    `
+    jlpm
+    jlpm build
+    jupyter labextension install .
+    `
