@@ -1,4 +1,4 @@
-# Customizing JupyterLab using extensions - SciPy 2020 Poster
+# Customizing JupyterLab using extensions
 
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajbozarth/SciPy2020/master?urlpath=lab)
 
@@ -60,5 +60,5 @@ Once your binder instance of JupyterLab has started, follow the steps below to l
 
 ## Resources
 
-* JupyterLab typescript extension cookiecutter repo: https://github.com/jupyterlab/extension-cookiecutter-ts
-* Video presentation of this demo from PyData Austin 2019: https://youtu.be/PT9UIvLWUI0
+* [JupyterLab extension cookiecutter repo](https://github.com/jupyterlab/extension-cookiecutter-ts)
+* [Video presentation of this demo from PyData Austin 2019](https://youtu.be/PT9UIvLWUI0)
