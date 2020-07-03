@@ -2,9 +2,12 @@
 
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajbozarth/SciPy2020/master?urlpath=lab)
 
+[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) is the next generation UI for [Project Jupyter](https://jupyter.org) and intended to replace the classic Jupyter Notebook UI. It is designed to be extendable and is itself a collection of extensions. The core extensions of JupyterLab are purposfully limited in scope with the expectation that developers will create extensions to customize thier user's experience. This demo walk-through is designed to show not only how to create and install a simple JupyterLab extension, but how to do so all within a running JupyterLab instance.
+
+To start the walk-through, click on the Launch Binder link above to start JupyterLab. Then follow the instruction below.
+
 ## Creating a lab extension
 
-Click on the Launch Binder link above to load JupyterLab.
 Once your binder instance of JupyterLab has started, follow the steps below to learn how you can create and install a lab extension all from within JupyterLab.
 
 1. From the launcher tab, open a Terminal and run the following command to create a lab extension from a cookiecutter.
@@ -58,7 +61,13 @@ Once your binder instance of JupyterLab has started, follow the steps below to l
 
 1. Once the build finishes refresh your browser so JuyterLab can catch the rebuilt files. Now create a new Notebook from the Launcher and you'll see your button in the toolbar, try clicking it.
 
+## Next Steps
+
+Now that you've seen how easy it is to create a simple extension, try looking at [other extensions on GitHub](https://github.com/topics/jupyterlab-extension) for inspiration. Extensions can do a lot more than what you saw in the walk-through, including extending the JupyterLab API, creating your own editors and file viewers, or changing the UI theme. To help you get started I've some helpful resources below, including an older video presentation that this walk-through was based off of.
+
 ## Resources
 
+* [JupyterLab documentation](https://jupyterlab.readthedocs.io/en/stable/)
+* [JupyterLab extensions on GitHub](https://github.com/topics/jupyterlab-extension)
 * [JupyterLab extension cookiecutter repo](https://github.com/jupyterlab/extension-cookiecutter-ts)
 * [Video presentation of this demo from PyData Austin 2019](https://youtu.be/PT9UIvLWUI0)
