@@ -2,7 +2,7 @@
 
 [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ajbozarth/SciPy2020/master?urlpath=lab)
 
-[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) is the next generation UI for [Project Jupyter](https://jupyter.org) and intended to replace the classic Jupyter Notebook UI. It is designed to be extendable and is itself a collection of extensions. The core extensions of JupyterLab are purposfully limited in scope with the expectation that developers will create extensions to customize thier user's experience. This demo walk-through is designed to show not only how to create and install a simple JupyterLab extension, but how to do so all within a running JupyterLab instance.
+[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) is the next generation UI for [Project Jupyter](https://jupyter.org) and intended to replace the classic Jupyter Notebook UI. It is designed to be extendable and is itself a collection of extensions. The core extensions of JupyterLab are purposfully limited in scope with the expectation that developers will create extensions to customize their user's experience. This demo walk-through is designed to show not only how to create and install a simple JupyterLab extension, but how to do so all within a running JupyterLab instance.
 
 To start the walk-through, click on the Launch Binder link above to start JupyterLab. Then follow the instruction below.
 
@@ -63,7 +63,7 @@ Once your binder instance of JupyterLab has started, follow the steps below to l
 
 ## Next Steps
 
-Now that you've seen how easy it is to create a simple extension, try looking at [other extensions on GitHub](https://github.com/topics/jupyterlab-extension) for inspiration. Extensions can do a lot more than what you saw in the walk-through, including extending the JupyterLab API, creating your own editors and file viewers, or changing the UI theme. To help you get started I've some helpful resources below, including an older video presentation that this walk-through was based off of.
+Now that you've seen how easy it is to create a simple extension, try looking at [other extensions on GitHub](https://github.com/topics/jupyterlab-extension) for inspiration. Extensions can do a lot more than what you saw in the walk-through, including extending the JupyterLab API, creating your own editors and file viewers, or changing the UI theme. To help you get started I've included some helpful resources below, including an older video presentation that this walk-through was based off of.
 
 ## Resources
 
